@@ -36,3 +36,13 @@ let array_zarplata = it_department_employees.map(item => (item.salary))
 let all_zarplata = array_zarplata.reduce((a, b) => a + b)
 let credoi_zarplata = all_zarplata / array_zarplata.length
 console.log("Среднее арефметическое зарплата сотрудников", credoi_zarplata)
+
+
+/*Задача 3
+Из выше стоящего задания. Отфильтровать сотрудников и оставить только тех, у
+кого ЗП больше 1500 ,из осташвихся сотрудников каждого повысить на 500,
+ результат записать в новый массив.*/
+let filter = it_department_employees.filter(item => item.salary < 1500)
+let result = filter.map(item => item.salary + 500)
+console.log(filter)
+console.log(result)
